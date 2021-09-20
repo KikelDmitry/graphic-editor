@@ -1,0 +1,20 @@
+-
+	var tools = [
+		{
+			title: 'Pencil',
+			icon: 'P',
+		},
+		{
+			title: 'Brush',
+			icon: 'B',
+		},
+		{
+			title: 'Clear canvas',
+			icon: 'C',
+		},
+	]
+
+.editor__toolbar.toolbar
+	.toolbar__group
+		each tool in tools
+			button.toolbar__item(type="button" name=tool.title) #{tool.icon}

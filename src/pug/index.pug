@@ -1,0 +1,12 @@
+extends _layout/base.pug
+
+block meta
+	//- - config.page.title = 'Graphic editor';
+	//- - config.page.description = 'Canvas based graphic editor';
+
+block body
+	include _includes/themeSwitcher.pug
+	.editor
+		include _includes/tools.pug
+		include _includes/canvas.pug
+	

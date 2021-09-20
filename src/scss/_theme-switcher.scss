@@ -1,0 +1,25 @@
+.theme-switcher {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	padding: 10px;
+
+	&__title {
+		padding-right: 0.3em;
+		font-weight: 500;
+	}
+	&__label {
+		padding: 0 0.3em;
+		cursor: pointer;
+	}
+	&__input {
+		&:checked {
+			& + .theme-switcher__name {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__name {
+	}
+}

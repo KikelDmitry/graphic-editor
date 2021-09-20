@@ -1,0 +1,12 @@
+-
+	var themes = [
+		'Default',
+		'Neumorphism',
+		'High Contrast',
+	]
+.theme-switcher
+	.theme-switcher__title Themes: 
+	each theme, idx in themes
+		label.theme-switcher__label
+			input.theme-switcher__input.visually-hidden(type="radio" name="theme" value="theme-" + theme.replace(' ', '-').toLowerCase() checked=(idx == 0 ? true : false))
+			span.theme-switcher__name #{theme}

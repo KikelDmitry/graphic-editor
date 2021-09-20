@@ -1,0 +1,51 @@
+.toolbar {
+	$size: 44px;
+
+	display: flex;
+	min-height: $size;
+	padding: 10px;
+
+	&__group {
+		display: flex;
+	}
+	&__item {
+		position: relative;
+		flex: 0 0 auto;
+		width: $size;
+		height: $size;
+		display: block;
+		border: 3px outset #c0c0c0;
+
+		&:hover {
+			&::before {
+				opacity: 1;
+				visibility: visible;
+				transform: translate(-50%, -10px);
+			}
+		}
+		&:active {
+			border-style: inset;
+		}
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+		&::before {
+			content: attr(name);
+			position: absolute;
+			top: -20px;
+			left: 50%;
+			padding: 0.2em 0.4em;
+			background-color: rgba(255, 255, 255, 0.8);
+			border-radius: 4px;
+			box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+			font-size: 14px;
+			font-weight: 300;
+			white-space: nowrap;
+			transform: translateX(-50%);
+			transition: all 300ms;
+			pointer-events: none;
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+}
