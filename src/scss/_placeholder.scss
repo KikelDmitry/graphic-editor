@@ -1,0 +1,21 @@
+.mobile-placeholder {
+	display: none;
+
+	@include df(800) {
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: z(immortal);
+		background-color: rgba(0, 0, 0, 0.8);
+		color: $color-bg;
+		text-align: center;
+		font-size: 12vw;
+		line-height: 1.5;
+	}
+}

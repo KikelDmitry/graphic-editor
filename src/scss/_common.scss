@@ -1,7 +1,7 @@
 :root {
 }
 body {
-	min-width: 280px;
+	min-width: 800px;
 	min-height: 480px;
 	width: 100%;
 	min-height: 100vh;
@@ -12,6 +12,7 @@ body {
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1;
+	// overflow: hidden;
 }
 .wrapper {
 }

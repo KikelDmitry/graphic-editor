@@ -3,18 +3,23 @@
 		{
 			title: 'Pencil',
 			icon: 'P',
+			class: 'pencil',
 		},
 		{
 			title: 'Brush',
 			icon: 'B',
+			class: 'brush',
 		},
 		{
 			title: 'Clear canvas',
 			icon: 'C',
+			class: 'clear',
 		},
 	]
 
 .editor__toolbar.toolbar
 	.toolbar__group
 		each tool in tools
-			button.toolbar__item(type="button" name=tool.title) #{tool.icon}
+			button.toolbar__item(type="button" name=tool.title class="canvas_" + tool.class) #{tool.icon}
+		input(type="color" name="color-picker" value="#0000ff")
+		input(type="range" name="line-width")
